@@ -1,0 +1,57 @@
+# robots.txt — Juan Carlos Luis, Fontanero Autorizado Tenerife
+# Actualiza el Sitemap con tu dominio real
+
+User-agent: *
+Allow: /
+
+# Bots de motores de búsqueda tradicionales
+User-agent: Googlebot
+Allow: /
+
+User-agent: Bingbot
+Allow: /
+
+User-agent: Slurp
+Allow: /
+
+User-agent: DuckDuckBot
+Allow: /
+
+# Bots de IA — permitidos explícitamente para máxima visibilidad
+User-agent: GPTBot
+Allow: /
+
+User-agent: ChatGPT-User
+Allow: /
+
+User-agent: anthropic-ai
+Allow: /
+
+User-agent: ClaudeBot
+Allow: /
+
+User-agent: PerplexityBot
+Allow: /
+
+User-agent: Google-Extended
+Allow: /
+
+User-agent: Applebot
+Allow: /
+
+User-agent: Meta-ExternalAgent
+Allow: /
+
+User-agent: DuckAssistBot
+Allow: /
+
+User-agent: cohere-ai
+Allow: /
+
+User-agent: CCBot
+Allow: /
+
+User-agent: Grok
+Allow: /
+
+Sitemap: https://tudominio.es/sitemap.xml

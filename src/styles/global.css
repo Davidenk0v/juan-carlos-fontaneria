@@ -1,1 +1,12 @@
 @import "tailwindcss";
+
+html {
+  scroll-behavior: smooth;
+}
+
+/* Compensar el header fijo al navegar a una sección */
+#inicio,
+#servicios,
+#contacto {
+  scroll-margin-top: 100px;
+}

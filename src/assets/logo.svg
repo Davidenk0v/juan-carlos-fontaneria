@@ -1,0 +1,27 @@
+<!-- logo.svg -->
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 500 600" width="500" height="400" role="img" aria-label="L&amp;M Fontanería - Juan Carlos Luis">
+  <!-- Usamos currentColor para que el color se controle desde CSS -->
+
+  <!-- Texto L&M -->
+  <text x="50%" y="340" text-anchor="middle" dominant-baseline="middle"
+        font-family="Georgia, 'Times New Roman', serif"
+        font-weight="700"
+        font-size="130"
+        fill="currentColor">L&amp;M</text>
+
+  <!-- Subtítulos -->
+  <text x="50%" y="440" text-anchor="middle"
+        font-family="Arial, Helvetica, sans-serif"
+        font-size="34"
+        font-weight="700"
+        letter-spacing="6"
+        text-transform="uppercase"
+        fill="currentColor">FONTANERÍA</text>
+
+  <text x="50%" y="490" text-anchor="middle"
+        font-family="Arial, Helvetica, sans-serif"
+        font-size="26"
+        font-weight="600"
+        letter-spacing="4"
+        fill="currentColor">JUAN CARLOS LUIS</text>
+</svg>
