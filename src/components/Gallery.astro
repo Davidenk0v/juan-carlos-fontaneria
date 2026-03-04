@@ -3,14 +3,17 @@ import { Image } from "astro:assets";
 import trabajo1 from "../assets/img/img1.jpeg";
 import trabajo2 from "../assets/img/img2.jpeg";
 import trabajo3 from "../assets/img/img3.jpeg";
+import trabajo4 from "../assets/img/img4.jpeg";
+import trabajo5 from "../assets/img/img5.jpeg";
+import trabajo6 from "../assets/img/img6.jpeg";
 
 const trabajos = [
-  { id: 1, label: "Instalación",   titulo: "Renovación de cuarto de baño",     desc: "Instalación completa de sanitarios, grifería y sistema de desagüe con materiales premium.", img: "install" },
-  { id: 2, label: "Reparación",    titulo: "Fuga en tubería empotrada",         desc: "Detección y reparación de fuga oculta sin afectar al acabado de la pared.", img: "repair" },
-  { id: 3, label: "Calefacción",   titulo: "Caldera de condensación",           desc: "Instalación de caldera de alto rendimiento con termostato programable.", img: "heat" },
-  { id: 4, label: "Instalación",   titulo: "Grifería de cocina",                desc: "Sustitución y modernización completa de grifería con modelos de bajo consumo.", img: "install" },
-  { id: 5, label: "Reparación",    titulo: "Desatasco urgente",                 desc: "Intervención de urgencia para desatasco en sistema de desagüe en menos de una hora.", img: "repair" },
-  { id: 6, label: "Calefacción",   titulo: "Termo eléctrico 100L",              desc: "Sustitución de termo antiguo por modelo de bajo consumo con garantía de fabricante.", img: "heat" },
+  { id: 1, label: "Instalación",   titulo: "Cuarto de contadores",     desc: "Instalación completa de cuarto de contadores.", img: trabajo1 },
+  { id: 2, label: "Reparación",    titulo: "Fuga en tubería empotrada",         desc: "Detección y reparación de fuga oculta sin afectar al acabado de la pared.", img: trabajo2 },
+  { id: 3, label: "Calefacción",   titulo: "Caldera de condensación",           desc: "Instalación de caldera de alto rendimiento con termostato programable.", img: trabajo3 },
+  { id: 4, label: "Instalación",   titulo: "Grifería de cocina",                desc: "Sustitución y modernización completa de grifería con modelos de bajo consumo.", img: trabajo4 },
+  { id: 5, label: "Reparación",    titulo: "Desatasco urgente",                 desc: "Intervención de urgencia para desatasco en sistema de desagüe en menos de una hora.", img: trabajo5 },
+  { id: 6, label: "Calefacción",   titulo: "Termo eléctrico 100L",              desc: "Sustitución de termo antiguo por modelo de bajo consumo con garantía de fabricante.", img: trabajo6 },
 ];
 ---
 
@@ -40,24 +43,9 @@ const trabajos = [
 
           <!-- Imagen o placeholder -->
           <div class="aspect-[4/3] relative overflow-hidden">
-            {t.img === "install" && (
-              <Image src={trabajo1} alt={t.titulo} width={600} height={450} class="absolute inset-0 w-full h-full object-cover transition-transform duration-500 group-hover:scale-105" />
+            {t.img && (
+              <Image src={t.img} alt={t.titulo} width={600} height={450} class="absolute inset-0 w-full h-full object-cover transition-transform duration-500 group-hover:scale-105" />
             )}
-            {t.img === "repair" && (
-              <Image src={trabajo2} alt={t.titulo} width={600} height={450} class="absolute inset-0 w-full h-full object-cover transition-transform duration-500 group-hover:scale-105" />
-            )}
-            {t.img === "heat" && (
-              <Image src={trabajo3} alt={t.titulo} width={600} height={450} class="absolute inset-0 w-full h-full object-cover transition-transform duration-500 group-hover:scale-105" />
-            )}
-            {t.img === "maintenance" && (
-              <div class="absolute inset-0 bg-gradient-to-br from-surface to-raised flex items-center justify-center">
-                <svg class="w-20 h-20 text-chalk-mute opacity-20" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1" d="M10.325 4.317c.426-1.756 2.924-1.756 3.35 0a1.724 1.724 0 002.573 1.066c1.543-.94 3.31.826 2.37 2.37a1.724 1.724 0 001.065 2.572c1.756.426 1.756 2.924 0 3.35a1.724 1.724 0 00-1.066 2.573c.94 1.543-.826 3.31-2.37 2.37a1.724 1.724 0 00-2.572 1.065c-.426 1.756-2.924 1.756-3.35 0a1.724 1.724 0 00-2.573-1.066c-1.543.94-3.31-.826-2.37-2.37a1.724 1.724 0 00-1.065-2.572c-1.756-.426-1.756-2.924 0-3.35a1.724 1.724 0 001.066-2.573c-.94-1.543.826-3.31 2.37-2.37.996.608 2.296.07 2.572-1.065z"/>
-                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1" d="M15 12a3 3 0 11-6 0 3 3 0 016 0z"/>
-                </svg>
-              </div>
-            )}
-
             <!-- Badge categoría -->
             <div class="absolute top-3 left-3 z-10">
               <span class="bg-void/60 backdrop-blur-sm text-chalk-dim text-[11px] font-bold tracking-wide uppercase px-3 py-1 rounded-full border border-rim/60">
