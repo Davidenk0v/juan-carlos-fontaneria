@@ -1,113 +1,144 @@
 ---
-import JobCard from './JobCard.astro'
-import Stats from './Stats.astro'
+import JobCard from './JobCard.astro';
+import Stats from './Stats.astro';
 ---
 
-<section id="inicio" class="relative pt-24 min-h-[100svh] bg-slate-900 flex items-center overflow-hidden">
+<section id="inicio" class="relative min-h-[100svh] bg-void flex items-center overflow-hidden pt-[72px]">
 
-  <!-- Patrón de puntos de fondo -->
-  <div class="absolute inset-0 pointer-events-none" style="background-image: radial-gradient(circle, rgba(148,163,184,0.07) 1px, transparent 1px); background-size: 28px 28px;"></div>
-
-  <!-- Esferas decorativas de fondo -->
+  <!-- Luz de fondo — cobre cálido -->
   <div class="absolute inset-0 pointer-events-none overflow-hidden">
-    <div class="absolute top-0 right-0 w-[700px] h-[700px] bg-sky-500/15 rounded-full blur-3xl translate-x-1/3 -translate-y-1/4"></div>
-    <div class="absolute bottom-0 left-0 w-[500px] h-[500px] bg-blue-700/10 rounded-full blur-3xl -translate-x-1/4 translate-y-1/4"></div>
-    <div class="absolute top-1/2 left-1/2 w-[400px] h-[400px] bg-cyan-500/5 rounded-full blur-3xl -translate-x-1/2 -translate-y-1/2"></div>
+    <div
+      class="absolute top-0 right-0 w-[900px] h-[900px] rounded-full opacity-25"
+      style="background: radial-gradient(circle at center, #cf7840 0%, transparent 65%); transform: translate(45%, -40%); filter: blur(80px);"
+    ></div>
+    <div
+      class="absolute bottom-0 left-0 w-[700px] h-[700px] rounded-full opacity-10"
+      style="background: radial-gradient(circle at center, #1b6aaa 0%, transparent 65%); transform: translate(-35%, 35%); filter: blur(100px);"
+    ></div>
   </div>
 
-  <div class="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16 lg:py-24 w-full">
+  <!-- Grid sutil de fondo -->
+  <div
+    class="absolute inset-0 pointer-events-none opacity-[0.025]"
+    style="background-image: linear-gradient(var(--color-chalk) 1px, transparent 1px), linear-gradient(90deg, var(--color-chalk) 1px, transparent 1px); background-size: 72px 72px;"
+  ></div>
 
-    <!-- Badge de urgencias -->
-    <div class="inline-flex items-center gap-2 bg-red-500/10 border border-red-500/20 text-red-400 rounded-full px-4 py-1.5 text-sm font-medium mb-10">
-      <span class="w-2 h-2 bg-red-400 rounded-full animate-pulse"></span>
-      Urgencias 24 horas
-    </div>
+  <!-- Línea de cobre vertical decorativa -->
+  <div class="absolute left-0 top-0 bottom-0 w-1 bg-gradient-to-b from-transparent via-copper/40 to-transparent hidden lg:block"></div>
 
-    <div class="grid lg:grid-cols-2 gap-12 lg:gap-20 items-center">
+  <div class="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-20 lg:py-28 w-full">
+    <div class="grid lg:grid-cols-[1fr_420px] gap-16 lg:gap-20 items-center">
 
-      <!-- Columna izquierda: texto y CTAs -->
-      <div class="space-y-6">
-        <h1 class="text-5xl md:text-6xl lg:text-[4.5rem] font-extrabold leading-[1.05] tracking-tight">
-          <span class="text-white">Fontanero</span><br>
-          <span class="text-sky-400">autorizado</span><br>
-          <span class="text-white">de confianza</span>
+      <!-- Columna izquierda: texto editorial -->
+      <div>
+
+        <!-- Badge de estado -->
+        <div class="inline-flex items-center gap-2.5 bg-surface border border-rim text-copper text-xs font-bold tracking-widest uppercase px-4 py-2 rounded-full mb-10 anim-fade-up">
+          <span class="w-1.5 h-1.5 bg-copper rounded-full animate-pulse"></span>
+          Urgencias disponibles 24 horas
+        </div>
+
+        <!-- Titular editorial con Fraunces -->
+        <h1 class="font-display leading-[0.92] tracking-tight mb-8 anim-fade-up delay-100" style="font-size: clamp(3.2rem, 8vw, 6.5rem);">
+          <span class="block text-chalk">Fontanero</span>
+          <span class="block italic text-copper">autorizado</span>
+          <span class="block text-chalk">de confianza.</span>
         </h1>
 
-        <p class="text-lg text-slate-400 leading-relaxed max-w-md">
-          Fontanero autorizado con más de 20 años de experiencia en reparaciones, instalaciones y mantenimiento de fontanería en Tenerife.
-        </p>
-        <p class="text-lg text-slate-400 leading-relaxed max-w-md">
-          Licencia N° 05-B-D90.
+        <!-- Divisor con licencia -->
+        <div class="flex items-center gap-4 mb-8 anim-fade-up delay-200">
+          <div class="h-px flex-shrink-0 w-16 bg-copper/50"></div>
+          <p class="text-chalk-mute text-xs font-bold tracking-widest uppercase">Tenerife · Licencia 05-B-D90</p>
+        </div>
+
+        <!-- Descripción -->
+        <p class="text-chalk-dim text-lg leading-relaxed mb-10 max-w-lg anim-fade-up delay-200">
+          Más de 20 años resolviendo reparaciones urgentes, instalaciones y mantenimiento de fontanería en Tenerife. Trabajo garantizado, presupuesto sin coste.
         </p>
 
-        <div class="flex flex-col sm:flex-row gap-3">
+        <!-- CTAs -->
+        <div class="flex flex-col sm:flex-row gap-3 mb-14 anim-fade-up delay-300">
           <a
             href="#contacto"
-            class="inline-flex items-center justify-center px-7 py-3.5 bg-sky-500 hover:bg-sky-400 text-white font-semibold rounded-xl transition-colors text-base shadow-lg shadow-sky-500/20"
+            class="inline-flex items-center justify-center px-8 py-4 bg-copper hover:bg-copper-light text-void text-base font-bold rounded-xl transition-all duration-200 shadow-xl shadow-copper/25 hover:shadow-copper/40 hover:-translate-y-px"
           >
             Solicitar presupuesto gratis
           </a>
           <a
             href="https://wa.me/34643368225"
             target="_blank"
-            class="inline-flex items-center justify-center gap-2.5 px-7 py-3.5 border border-white/15 hover:bg-white/5 text-white font-semibold rounded-xl transition-colors text-base"
+            rel="noopener noreferrer"
+            class="inline-flex items-center justify-center gap-2.5 px-8 py-4 border border-border hover:bg-raised text-chalk text-base font-semibold rounded-xl transition-all duration-200"
           >
-            <svg class="w-5 h-5 text-green-400" fill="currentColor" viewBox="0 0 24 24">
+            <svg class="w-5 h-5 text-green-400 shrink-0" fill="currentColor" viewBox="0 0 24 24">
               <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893A11.821 11.821 0 0020.885 3.488"/>
             </svg>
             WhatsApp
           </a>
         </div>
 
-        <!-- Stats de confianza -->
-        <div class="grid grid-cols-3 gap-6 pt-8 border-t border-white/10">
-          <Stats title="20h" text="Urgencias" />
-          <Stats title="100%" text="Trabajos garantizados" />
-          <Stats title="+20" text="Años de experiencia" />
+        <!-- Stats -->
+        <div class="grid grid-cols-3 gap-6 pt-8 border-t border-rim anim-fade-up delay-400">
+          <Stats title="24h"  text="Urgencias" />
+          <Stats title="100%" text="Garantizado" />
+          <Stats title="+20"  text="Años de experiencia" />
         </div>
       </div>
 
       <!-- Columna derecha: tarjetas de servicios -->
-      <div class="grid grid-cols-2 gap-3">
+      <div class="grid grid-cols-2 gap-3 anim-fade-up delay-300">
 
-        <!-- Reparaciones -->
-        <JobCard title="Reparaciones" description="Fugas, atascos, averías urgentes" background="red">
-            <svg class="w-5 h-5 text-red-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z"/>
-            </svg>
+        <JobCard title="Reparaciones" description="Fugas, atascos y averías urgentes" background="red">
+          <svg class="w-5 h-5 text-red-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z"/>
+          </svg>
         </JobCard>
 
-        <!-- Instalaciones -->
         <JobCard title="Instalaciones" description="Tuberías, grifería y sanitarios" background="blue">
-            <svg class="w-5 h-5 text-sky-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 4h8l-1 1v5.172a2 2 0 00.586 1.414l5 5c1.26 1.26.367 3.414-1.415 3.414H4.828c-1.782 0-2.674-2.154-1.414-3.414l5-5A2 2 0 009 10.172V5L8 4z"/>
-            </svg>
+          <svg class="w-5 h-5 text-sky-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 4h8l-1 1v5.172a2 2 0 00.586 1.414l5 5c1.26 1.26.367 3.414-1.415 3.414H4.828c-1.782 0-2.674-2.154-1.414-3.414l5-5A2 2 0 009 10.172V5L8 4z"/>
+          </svg>
         </JobCard>
 
-        <!-- Calefacción -->
         <JobCard title="Calefacción" description="Calderas, termos y radiadores" background="orange">
-            <svg class="w-5 h-5 text-orange-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17.657 18.657A8 8 0 016.343 7.343S7 9 9 10c0-2 .5-5 2.986-7C14 5 16.09 5.777 17.656 7.343A7.975 7.975 0 0120 13a7.975 7.975 0 01-2.343 5.657z"/>
-              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9.879 16.121A3 3 0 1012.015 11L11 14H9c0 .768.293 1.536.879 2.121z"/>
-            </svg>
+          <svg class="w-5 h-5 text-orange-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17.657 18.657A8 8 0 016.343 7.343S7 9 9 10c0-2 .5-5 2.986-7C14 5 16.09 5.777 17.656 7.343A7.975 7.975 0 0120 13a7.975 7.975 0 01-2.343 5.657z"/>
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9.879 16.121A3 3 0 1012.015 11L11 14H9c0 .768.293 1.536.879 2.121z"/>
+          </svg>
         </JobCard>
 
-        <!-- Mantenimiento -->
         <JobCard title="Mantenimiento" description="Revisiones preventivas periódicas" background="emerald">
-            <svg class="w-5 h-5 text-emerald-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10.325 4.317c.426-1.756 2.924-1.756 3.35 0a1.724 1.724 0 002.573 1.066c1.543-.94 3.31.826 2.37 2.37a1.724 1.724 0 001.065 2.572c1.756.426 1.756 2.924 0 3.35a1.724 1.724 0 00-1.066 2.573c.94 1.543-.826 3.31-2.37 2.37a1.724 1.724 0 00-2.572 1.065c-.426 1.756-2.924 1.756-3.35 0a1.724 1.724 0 00-2.573-1.066c-1.543.94-3.31-.826-2.37-2.37a1.724 1.724 0 00-1.065-2.572c-1.756-.426-1.756-2.924 0-3.35a1.724 1.724 0 001.066-2.573c-.94-1.543.826-3.31 2.37-2.37.996.608 2.296.07 2.572-1.065z"/>
-              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 12a3 3 0 11-6 0 3 3 0 016 0z"/>
-            </svg>
+          <svg class="w-5 h-5 text-emerald-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10.325 4.317c.426-1.756 2.924-1.756 3.35 0a1.724 1.724 0 002.573 1.066c1.543-.94 3.31.826 2.37 2.37a1.724 1.724 0 001.065 2.572c1.756.426 1.756 2.924 0 3.35a1.724 1.724 0 00-1.066 2.573c.94 1.543-.826 3.31-2.37 2.37a1.724 1.724 0 00-2.572 1.065c-.426 1.756-2.924 1.756-3.35 0a1.724 1.724 0 00-2.573-1.066c-1.543.94-3.31-.826-2.37-2.37a1.724 1.724 0 00-1.065-2.572c-1.756-.426-1.756-2.924 0-3.35a1.724 1.724 0 001.066-2.573c-.94-1.543.826-3.31 2.37-2.37.996.608 2.296.07 2.572-1.065z"/>
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 12a3 3 0 11-6 0 3 3 0 016 0z"/>
+          </svg>
         </JobCard>
+
+        <!-- Tarjeta CTA de llamada — ocupa 2 columnas -->
+        <a
+          href="tel:643368225"
+          class="col-span-2 bg-copper/10 border border-copper/30 hover:bg-copper/15 hover:border-copper/50 rounded-2xl p-4 flex items-center justify-between transition-all duration-300 group"
+        >
+          <div class="flex items-center gap-3">
+            <div class="w-9 h-9 bg-copper/15 rounded-lg flex items-center justify-center">
+              <svg class="w-4 h-4 text-copper" fill="currentColor" viewBox="0 0 24 24">
+                <path d="M20.01 15.38c-1.23 0-2.42-.2-3.53-.56-.35-.12-.74-.03-1.01.24l-1.57 1.97c-2.83-1.35-5.48-3.9-6.89-6.83l1.95-1.66c.27-.28.35-.67.24-1.02-.37-1.11-.56-2.3-.56-3.53 0-.54-.45-.99-.99-.99H4.19C3.65 3 3 3.24 3 3.99 3 13.28 10.73 21 20.01 21c.71 0 .99-.63.99-1.18v-3.45c0-.54-.45-.99-.99-.99z"/>
+              </svg>
+            </div>
+            <div>
+              <p class="text-copper font-bold text-sm leading-none">643 368 225</p>
+              <p class="text-chalk-mute text-xs mt-0.5">Llamada directa</p>
+            </div>
+          </div>
+          <svg class="w-4 h-4 text-copper/50 group-hover:text-copper transition-colors" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"/>
+          </svg>
+        </a>
 
       </div>
     </div>
   </div>
 
-  <!-- Separador wave inferior -->
-  <div class="absolute bottom-0 left-0 right-0 pointer-events-none">
-    <svg viewBox="0 0 1440 60" fill="none" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="none" class="w-full h-12 md:h-16">
-      <path d="M0,30 C360,60 1080,0 1440,30 L1440,60 L0,60 Z" fill="white"/>
-    </svg>
-  </div>
+  <!-- Separador inferior hacia la siguiente sección -->
+  <div class="absolute bottom-0 left-0 right-0 h-px bg-gradient-to-r from-transparent via-rim to-transparent"></div>
 </section>

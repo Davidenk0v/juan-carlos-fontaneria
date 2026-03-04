@@ -1,42 +1,48 @@
 ---
 ---
 
-<section id="contacto" class="py-24 bg-slate-50">
-  <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+<section id="contacto" class="py-28 bg-surface relative overflow-hidden">
+
+  <!-- Acento de luz -->
+  <div class="absolute top-0 left-0 w-[600px] h-[600px] rounded-full opacity-[0.06] pointer-events-none"
+    style="background: radial-gradient(circle, #cf7840 0%, transparent 70%); transform: translate(-30%, -30%); filter: blur(80px);"></div>
+
+  <div class="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
 
     <!-- Cabecera -->
     <div class="text-center mb-16">
-      <p class="text-sky-500 font-semibold text-sm tracking-widest uppercase mb-3">Contacto</p>
-      <h2 class="text-4xl font-bold text-slate-900 mb-4">
+      <p class="text-copper font-bold text-xs tracking-widest uppercase mb-4">Contacto</p>
+      <h2 class="font-display text-4xl md:text-5xl font-bold text-chalk mb-5 leading-tight">
         Estamos aquí para ayudarte
       </h2>
-      <p class="text-lg text-slate-500 max-w-2xl mx-auto">
+      <p class="text-chalk-dim text-lg max-w-2xl mx-auto leading-relaxed">
         Contáctanos por el medio que prefieras o solicita tu presupuesto gratuito ahora mismo
       </p>
     </div>
 
-    <div class="grid lg:grid-cols-2 gap-10">
+    <div class="grid lg:grid-cols-2 gap-8 items-start">
 
-      <!-- Columna izquierda: info de contacto -->
-      <div class="space-y-5">
+      <!-- Columna izquierda: métodos de contacto -->
+      <div class="space-y-4">
 
         <!-- WhatsApp -->
         <a
           href="https://wa.me/34643368225"
           target="_blank"
-          class="flex items-center gap-5 bg-white border border-slate-200 rounded-2xl p-5 hover:border-green-200 hover:bg-green-50/50 transition-all duration-300 shadow-sm hover:shadow-md group"
+          rel="noopener noreferrer"
+          class="flex items-center gap-5 bg-raised border border-rim rounded-2xl p-5 hover:border-green-500/30 hover:bg-high transition-all duration-300 group"
         >
-          <div class="w-13 h-13 min-w-[3.25rem] bg-green-500 rounded-xl flex items-center justify-center shadow-lg shadow-green-500/20">
-            <svg class="w-6 h-6 text-white" fill="currentColor" viewBox="0 0 24 24">
+          <div class="w-12 h-12 bg-green-500/10 border border-green-500/20 rounded-xl flex items-center justify-center shrink-0">
+            <svg class="w-6 h-6 text-green-400" fill="currentColor" viewBox="0 0 24 24">
               <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893A11.821 11.821 0 0020.885 3.488"/>
             </svg>
           </div>
-          <div>
-            <p class="text-xs text-slate-400 font-medium uppercase tracking-wide mb-0.5">WhatsApp</p>
-            <p class="text-lg font-bold text-slate-900">643 368 225</p>
-            <p class="text-sm text-slate-500">Respuesta inmediata</p>
+          <div class="flex-1 min-w-0">
+            <p class="text-xs text-chalk-mute font-bold tracking-widest uppercase mb-0.5">WhatsApp</p>
+            <p class="text-lg font-bold text-chalk">643 368 225</p>
+            <p class="text-sm text-chalk-mute">Respuesta inmediata</p>
           </div>
-          <svg class="w-5 h-5 text-slate-300 group-hover:text-green-400 ml-auto transition-colors" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+          <svg class="w-5 h-5 text-chalk-mute group-hover:text-green-400 transition-colors shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
             <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"/>
           </svg>
         </a>
@@ -44,19 +50,19 @@
         <!-- Teléfono -->
         <a
           href="tel:643368225"
-          class="flex items-center gap-5 bg-white border border-slate-200 rounded-2xl p-5 hover:border-sky-200 hover:bg-sky-50/50 transition-all duration-300 shadow-sm hover:shadow-md group"
+          class="flex items-center gap-5 bg-raised border border-rim rounded-2xl p-5 hover:border-copper/30 hover:bg-high transition-all duration-300 group"
         >
-          <div class="w-13 h-13 min-w-[3.25rem] bg-sky-500 rounded-xl flex items-center justify-center shadow-lg shadow-sky-500/20">
-            <svg class="w-6 h-6 text-white" fill="currentColor" viewBox="0 0 24 24">
+          <div class="w-12 h-12 bg-copper/10 border border-copper/20 rounded-xl flex items-center justify-center shrink-0">
+            <svg class="w-6 h-6 text-copper" fill="currentColor" viewBox="0 0 24 24">
               <path d="M20.01 15.38c-1.23 0-2.42-.2-3.53-.56-.35-.12-.74-.03-1.01.24l-1.57 1.97c-2.83-1.35-5.48-3.9-6.89-6.83l1.95-1.66c.27-.28.35-.67.24-1.02-.37-1.11-.56-2.3-.56-3.53 0-.54-.45-.99-.99-.99H4.19C3.65 3 3 3.24 3 3.99 3 13.28 10.73 21 20.01 21c.71 0 .99-.63.99-1.18v-3.45c0-.54-.45-.99-.99-.99z"/>
             </svg>
           </div>
-          <div>
-            <p class="text-xs text-slate-400 font-medium uppercase tracking-wide mb-0.5">Teléfono</p>
-            <p class="text-lg font-bold text-slate-900">643 368 225</p>
-            <p class="text-sm text-slate-500">Llamada directa</p>
+          <div class="flex-1 min-w-0">
+            <p class="text-xs text-chalk-mute font-bold tracking-widest uppercase mb-0.5">Teléfono</p>
+            <p class="text-lg font-bold text-chalk">643 368 225</p>
+            <p class="text-sm text-chalk-mute">Llamada directa</p>
           </div>
-          <svg class="w-5 h-5 text-slate-300 group-hover:text-sky-400 ml-auto transition-colors" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+          <svg class="w-5 h-5 text-chalk-mute group-hover:text-copper transition-colors shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
             <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"/>
           </svg>
         </a>
@@ -64,55 +70,55 @@
         <!-- Email -->
         <a
           href="mailto:luismedinagua@gmail.com"
-          class="flex items-center gap-5 bg-white border border-slate-200 rounded-2xl p-5 hover:border-slate-300 hover:bg-slate-50 transition-all duration-300 shadow-sm hover:shadow-md group"
+          class="flex items-center gap-5 bg-raised border border-rim rounded-2xl p-5 hover:border-border hover:bg-high transition-all duration-300 group"
         >
-          <div class="w-13 h-13 min-w-[3.25rem] bg-slate-700 rounded-xl flex items-center justify-center shadow-lg shadow-slate-700/20">
-            <svg class="w-6 h-6 text-white" fill="currentColor" viewBox="0 0 24 24">
+          <div class="w-12 h-12 bg-chalk/5 border border-chalk/10 rounded-xl flex items-center justify-center shrink-0">
+            <svg class="w-6 h-6 text-chalk-dim" fill="currentColor" viewBox="0 0 24 24">
               <path d="M20 4H4c-1.1 0-1.99.9-1.99 2L2 18c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2zm0 4l-8 5-8-5V6l8 5 8-5v2z"/>
             </svg>
           </div>
-          <div>
-            <p class="text-xs text-slate-400 font-medium uppercase tracking-wide mb-0.5">Email</p>
-            <p class="text-base font-bold text-slate-900">luismedinagua@gmail.com</p>
-            <p class="text-sm text-slate-500">Presupuestos por escrito</p>
+          <div class="flex-1 min-w-0">
+            <p class="text-xs text-chalk-mute font-bold tracking-widest uppercase mb-0.5">Email</p>
+            <p class="text-base font-bold text-chalk truncate">luismedinagua@gmail.com</p>
+            <p class="text-sm text-chalk-mute">Presupuestos por escrito</p>
           </div>
-          <svg class="w-5 h-5 text-slate-300 group-hover:text-slate-500 ml-auto transition-colors" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+          <svg class="w-5 h-5 text-chalk-mute group-hover:text-chalk transition-colors shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
             <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"/>
           </svg>
         </a>
 
         <!-- Horario -->
-        <div class="bg-slate-900 rounded-2xl p-6 text-white">
+        <div class="bg-raised border border-rim rounded-2xl p-6">
           <div class="flex items-center gap-3 mb-5">
-            <div class="w-8 h-8 bg-white/10 rounded-lg flex items-center justify-center">
-              <svg class="w-4 h-4 text-sky-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <div class="w-8 h-8 bg-copper/10 border border-copper/20 rounded-lg flex items-center justify-center">
+              <svg class="w-4 h-4 text-copper" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                 <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z"/>
               </svg>
             </div>
-            <h3 class="font-bold text-white">Horario de atención</h3>
+            <h3 class="font-bold text-chalk text-sm">Horario de atención</h3>
           </div>
           <div class="space-y-3 text-sm">
             <div class="flex justify-between items-center">
-              <span class="text-slate-400">Lunes – Viernes</span>
-              <span class="font-semibold text-white">8:00 – 20:00</span>
+              <span class="text-chalk-mute">Lunes – Viernes</span>
+              <span class="font-semibold text-chalk">8:00 – 20:00</span>
             </div>
-            <div class="h-px bg-white/5"></div>
+            <div class="h-px bg-rim"></div>
             <div class="flex justify-between items-center">
-              <span class="text-slate-400">Sábados</span>
-              <span class="font-semibold text-white">9:00 – 15:00</span>
+              <span class="text-chalk-mute">Sábados</span>
+              <span class="font-semibold text-chalk">9:00 – 15:00</span>
             </div>
-            <div class="h-px bg-white/5"></div>
+            <div class="h-px bg-rim"></div>
             <div class="flex justify-between items-center">
-              <span class="text-slate-400">Domingos</span>
-              <span class="font-semibold text-white">Solo urgencias</span>
+              <span class="text-chalk-mute">Domingos</span>
+              <span class="font-semibold text-chalk">Solo urgencias</span>
             </div>
-            <div class="h-px bg-white/5"></div>
+            <div class="h-px bg-rim"></div>
             <div class="flex justify-between items-center pt-1">
-              <span class="flex items-center gap-2 text-sky-400">
-                <span class="w-1.5 h-1.5 bg-sky-400 rounded-full animate-pulse"></span>
+              <span class="flex items-center gap-2 text-copper font-bold text-xs tracking-wide uppercase">
+                <span class="w-1.5 h-1.5 bg-copper rounded-full animate-pulse"></span>
                 Emergencias 24h
               </span>
-              <span class="font-bold text-sky-400">Disponible</span>
+              <span class="font-bold text-copper text-sm">Disponible</span>
             </div>
           </div>
         </div>
@@ -120,48 +126,44 @@
       </div>
 
       <!-- Columna derecha: formulario -->
-      <div class="bg-white rounded-2xl p-8 shadow-sm border border-slate-100">
-        <h3 class="text-2xl font-bold text-slate-900 mb-1">Solicitar presupuesto</h3>
-        <p class="text-slate-500 text-sm mb-7">Te respondemos en menos de 2 horas.</p>
+      <div class="bg-raised border border-rim rounded-2xl p-8">
+        <h3 class="font-display text-2xl font-bold text-chalk mb-1">Solicitar presupuesto</h3>
+        <p class="text-chalk-mute text-sm mb-8">Te respondemos en menos de 2 horas.</p>
 
         <form class="space-y-5" id="contact-form">
           <div>
-            <label for="nombre" class="block text-sm font-semibold text-slate-700 mb-1.5">
-              Nombre completo <span class="text-red-400">*</span>
+            <label for="nombre" class="block text-xs font-bold text-chalk-dim tracking-wide uppercase mb-2">
+              Nombre completo <span class="text-copper">*</span>
             </label>
             <input
               type="text"
               id="nombre"
               name="nombre"
               required
-              class="w-full px-4 py-3 border border-slate-200 rounded-xl text-slate-900 placeholder:text-slate-400 focus:outline-none focus:ring-2 focus:ring-sky-500 focus:border-transparent transition-all text-sm"
+              class="form-input"
               placeholder="Tu nombre y apellidos"
             >
           </div>
 
           <div>
-            <label for="telefono" class="block text-sm font-semibold text-slate-700 mb-1.5">
-              Teléfono de contacto <span class="text-red-400">*</span>
+            <label for="telefono" class="block text-xs font-bold text-chalk-dim tracking-wide uppercase mb-2">
+              Teléfono <span class="text-copper">*</span>
             </label>
             <input
               type="tel"
               id="telefono"
               name="telefono"
               required
-              class="w-full px-4 py-3 border border-slate-200 rounded-xl text-slate-900 placeholder:text-slate-400 focus:outline-none focus:ring-2 focus:ring-sky-500 focus:border-transparent transition-all text-sm"
+              class="form-input"
               placeholder="600 000 000"
             >
           </div>
 
           <div>
-            <label for="servicio" class="block text-sm font-semibold text-slate-700 mb-1.5">
+            <label for="servicio" class="block text-xs font-bold text-chalk-dim tracking-wide uppercase mb-2">
               Tipo de servicio
             </label>
-            <select
-              id="servicio"
-              name="servicio"
-              class="w-full px-4 py-3 border border-slate-200 rounded-xl text-slate-900 focus:outline-none focus:ring-2 focus:ring-sky-500 focus:border-transparent transition-all text-sm bg-white"
-            >
+            <select id="servicio" name="servicio" class="form-input">
               <option value="">Selecciona un servicio</option>
               <option value="reparacion-urgencia">Reparación de urgencia</option>
               <option value="instalacion">Instalación de agua</option>
@@ -172,22 +174,22 @@
           </div>
 
           <div>
-            <label for="mensaje" class="block text-sm font-semibold text-slate-700 mb-1.5">
-              Describe tu problema <span class="text-red-400">*</span>
+            <label for="mensaje" class="block text-xs font-bold text-chalk-dim tracking-wide uppercase mb-2">
+              Describe tu problema <span class="text-copper">*</span>
             </label>
             <textarea
               id="mensaje"
               name="mensaje"
               required
               rows="4"
-              class="w-full px-4 py-3 border border-slate-200 rounded-xl text-slate-900 placeholder:text-slate-400 focus:outline-none focus:ring-2 focus:ring-sky-500 focus:border-transparent transition-all resize-none text-sm"
-              placeholder="Explícanos qué necesitas para poder darte el mejor servicio..."
+              class="form-input resize-none"
+              placeholder="Explícanos qué necesitas para darte el mejor servicio..."
             ></textarea>
           </div>
 
           <button
             type="submit"
-            class="w-full bg-sky-500 hover:bg-sky-400 text-white font-semibold py-3.5 px-6 rounded-xl transition-colors shadow-lg shadow-sky-500/20 flex items-center justify-center gap-2 text-sm"
+            class="w-full bg-copper hover:bg-copper-light text-void font-bold py-4 px-6 rounded-xl transition-all duration-200 shadow-xl shadow-copper/20 hover:shadow-copper/35 flex items-center justify-center gap-2 text-sm hover:-translate-y-px"
           >
             <svg class="w-4 h-4" fill="currentColor" viewBox="0 0 24 24">
               <path d="M2.01 21L23 12 2.01 3 2 10l15 2-15 2z"/>
@@ -201,6 +203,31 @@
   </div>
 </section>
 
-<script>
+<style>
+  .form-input {
+    width: 100%;
+    padding: 0.75rem 1rem;
+    background-color: var(--color-surface);
+    border: 1px solid var(--color-rim);
+    border-radius: 0.75rem;
+    color: var(--color-chalk);
+    font-size: 0.875rem;
+    font-family: inherit;
+    transition: border-color 0.2s, box-shadow 0.2s;
+    outline: none;
+  }
+  .form-input::placeholder {
+    color: var(--color-chalk-mute);
+  }
+  .form-input:focus {
+    border-color: var(--color-copper);
+    box-shadow: 0 0 0 3px rgba(207, 120, 64, 0.12);
+  }
+  select.form-input option {
+    background-color: var(--color-surface);
+    color: var(--color-chalk);
+  }
+</style>
 
+<script>
 </script>
