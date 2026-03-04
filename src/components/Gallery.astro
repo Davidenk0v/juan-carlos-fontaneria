@@ -1,4 +1,10 @@
 ---
+import Image from "astro/components/Image.astro";
+import trabajo1 from "../assets/img/img1.jpeg";
+import trabajo2 from "../assets/img/img2.jpeg";
+import trabajo3 from "../assets/img/img3.jpeg";
+
+
 const trabajos = [
   {
     id: 1,
@@ -7,7 +13,7 @@ const trabajos = [
     titulo: "Renovación de cuarto de baño",
     desc: "Instalación completa de sanitarios, grifería y sistema de desagüe con materiales premium.",
     gradient: "from-sky-500 to-blue-700",
-    icon: "install",
+    img: "install",
   },
   {
     id: 2,
@@ -16,7 +22,7 @@ const trabajos = [
     titulo: "Fuga en tubería empotrada",
     desc: "Detección y reparación de fuga oculta sin afectar al acabado de la pared.",
     gradient: "from-red-500 to-rose-700",
-    icon: "repair",
+    img: "repair",
   },
   {
     id: 3,
@@ -25,7 +31,7 @@ const trabajos = [
     titulo: "Caldera de condensación",
     desc: "Instalación de caldera de alto rendimiento con termostato programable.",
     gradient: "from-orange-500 to-amber-700",
-    icon: "heat",
+    img: "heat",
   },
   {
     id: 4,
@@ -34,7 +40,7 @@ const trabajos = [
     titulo: "Grifería de cocina",
     desc: "Sustitución y modernización completa de grifería en cocina con modelos de bajo consumo.",
     gradient: "from-cyan-500 to-teal-700",
-    icon: "install",
+    img: "install",
   },
   {
     id: 5,
@@ -43,7 +49,7 @@ const trabajos = [
     titulo: "Revisión anual de instalación",
     desc: "Inspección completa y preventiva de toda la red de fontanería del inmueble.",
     gradient: "from-emerald-500 to-green-700",
-    icon: "maintenance",
+    img: "maintenance",
   },
   {
     id: 6,
@@ -52,7 +58,7 @@ const trabajos = [
     titulo: "Desatasco urgente",
     desc: "Intervención de urgencia para desatasco en sistema de desagüe en menos de una hora.",
     gradient: "from-violet-500 to-purple-700",
-    icon: "repair",
+    img: "repair",
   },
   {
     id: 7,
@@ -61,7 +67,7 @@ const trabajos = [
     titulo: "Termo eléctrico 100L",
     desc: "Sustitución de termo antiguo por modelo de bajo consumo con garantía de fabricante.",
     gradient: "from-yellow-500 to-orange-600",
-    icon: "heat",
+    img: "heat",
   },
   {
     id: 8,
@@ -70,7 +76,7 @@ const trabajos = [
     titulo: "Circuito hidráulico para piscina",
     desc: "Instalación del sistema completo de filtración y circulación para piscina comunitaria.",
     gradient: "from-blue-500 to-indigo-700",
-    icon: "install",
+    img: "install",
   },
   {
     id: 9,
@@ -79,7 +85,7 @@ const trabajos = [
     titulo: "Mantenimiento de grupos de presión",
     desc: "Revisión y puesta a punto de grupo de presión en comunidad de vecinos.",
     gradient: "from-slate-500 to-slate-700",
-    icon: "maintenance",
+    img: "maintenance",
   },
 ];
 ---
@@ -94,7 +100,10 @@ const trabajos = [
         Trabajos realizados
       </h2>
       <p class="text-lg text-slate-500 max-w-2xl mx-auto">
-        Más de 20 años de experiencia avalan la calidad de nuestros trabajos. Cada proyecto, un resultado garantizado.
+        Más de 20 años de experiencia avalan la calidad de nuestros trabajos.
+      </p>
+      <p class="text-lg text-slate-500 max-w-2xl mx-auto">
+        Cada proyecto, un resultado garantizado.
       </p>
     </div>
 
@@ -114,44 +123,37 @@ const trabajos = [
           class="gallery-item group relative rounded-2xl overflow-hidden cursor-pointer"
           data-cat={t.cat}
         >
-          <!-- Fondo placeholder (reemplazar por <img> con la foto real) -->
-          <div class={`aspect-[4/3] bg-gradient-to-br ${t.gradient} flex items-center justify-center relative`}>
+          <!-- Contenedor de imagen con proporción fija -->
+          <div class="aspect-[4/3] relative overflow-hidden">
 
-            <!-- Icono central decorativo -->
-            <div class="opacity-20 scale-150">
-              {t.icon === "install" && (
-                <svg class="w-20 h-20 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1" d="M8 4h8l-1 1v5.172a2 2 0 00.586 1.414l5 5c1.26 1.26.367 3.414-1.415 3.414H4.828c-1.782 0-2.674-2.154-1.414-3.414l5-5A2 2 0 009 10.172V5L8 4z"/>
-                </svg>
-              )}
-              {t.icon === "repair" && (
-                <svg class="w-20 h-20 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1" d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z"/>
-                </svg>
-              )}
-              {t.icon === "heat" && (
-                <svg class="w-20 h-20 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1" d="M17.657 18.657A8 8 0 016.343 7.343S7 9 9 10c0-2 .5-5 2.986-7C14 5 16.09 5.777 17.656 7.343A7.975 7.975 0 0120 13a7.975 7.975 0 01-2.343 5.657z"/>
-                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1" d="M9.879 16.121A3 3 0 1012.015 11L11 14H9c0 .768.293 1.536.879 2.121z"/>
-                </svg>
-              )}
-              {t.icon === "maintenance" && (
-                <svg class="w-20 h-20 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <!-- Imagen real (ocupa todo el contenedor independientemente de su tamaño original) -->
+            {t.img === "install" && (
+              <Image src={trabajo1} alt={t.titulo} width={600} height={450} class="absolute inset-0 w-full h-full object-cover" />
+            )}
+            {t.img === "repair" && (
+              <Image src={trabajo2} alt={t.titulo} width={600} height={450} class="absolute inset-0 w-full h-full object-cover" />
+            )}
+            {t.img === "heat" && (
+              <Image src={trabajo3} alt={t.titulo} width={600} height={450} class="absolute inset-0 w-full h-full object-cover" />
+            )}
+            {t.img === "maintenance" && (
+              <div class={`absolute inset-0 bg-gradient-to-br ${t.gradient} flex items-center justify-center`}>
+                <svg class="w-20 h-20 text-white opacity-30" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                   <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1" d="M10.325 4.317c.426-1.756 2.924-1.756 3.35 0a1.724 1.724 0 002.573 1.066c1.543-.94 3.31.826 2.37 2.37a1.724 1.724 0 001.065 2.572c1.756.426 1.756 2.924 0 3.35a1.724 1.724 0 00-1.066 2.573c.94 1.543-.826 3.31-2.37 2.37a1.724 1.724 0 00-2.572 1.065c-.426 1.756-2.924 1.756-3.35 0a1.724 1.724 0 00-2.573-1.066c-1.543.94-3.31-.826-2.37-2.37a1.724 1.724 0 00-1.065-2.572c-1.756-.426-1.756-2.924 0-3.35a1.724 1.724 0 001.066-2.573c-.94-1.543.826-3.31 2.37-2.37.996.608 2.296.07 2.572-1.065z"/>
                   <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1" d="M15 12a3 3 0 11-6 0 3 3 0 016 0z"/>
                 </svg>
-              )}
-            </div>
+              </div>
+            )}
 
             <!-- Badge de categoría -->
-            <div class="absolute top-3 left-3">
-              <span class="bg-white/20 backdrop-blur-sm text-white text-xs font-semibold px-3 py-1 rounded-full border border-white/30">
+            <div class="absolute top-3 left-3 z-10">
+              <span class="bg-black/40 backdrop-blur-sm text-white text-xs font-semibold px-3 py-1 rounded-full">
                 {t.label}
               </span>
             </div>
 
             <!-- Overlay hover -->
-            <div class="absolute inset-0 bg-slate-900/70 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex flex-col items-center justify-center p-6 text-center">
+            <div class="absolute inset-0 bg-slate-900/75 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex flex-col items-center justify-center p-6 text-center z-10">
               <p class="text-white font-bold text-lg mb-2">{t.titulo}</p>
               <p class="text-slate-300 text-sm leading-relaxed mb-5">{t.desc}</p>
               <a
