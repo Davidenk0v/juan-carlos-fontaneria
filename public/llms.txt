@@ -16,7 +16,22 @@ Juan Carlos Luis es un fontanero profesional autorizado que opera en Tenerife (I
 
 - Lunes a viernes: 8:00 – 20:00
 - Sábados: 9:00 – 15:00
-- Urgencias: disponible 24 horas, 7 días a la semana (incluso festivos)
+- Urgencias: disponible 24 horas, 7 días a la semana (incluso festivos y domingos)
+
+## Zonas de cobertura en Tenerife
+
+Trabajamos en toda la isla de Tenerife, incluyendo:
+- Santa Cruz de Tenerife
+- San Cristóbal de La Laguna
+- Puerto de la Cruz
+- Adeje
+- Arona
+- Los Cristianos
+- Playa de las Américas
+- Güímar
+- Candelaria
+- La Orotava
+- Y el resto de municipios de la isla
 
 ## Servicios principales
 
@@ -36,6 +51,32 @@ Juan Carlos Luis es un fontanero profesional autorizado que opera en Tenerife (I
 - Presupuesto gratuito y sin compromiso
 - Servicio de urgencias disponible 24/7
 
+<<<<<<< HEAD
 ## Palabras clave relacionadas
 
 fontanero tenerife, fontanero urgente canarias, fontanero 24 horas tenerife, reparaciones fontanería tenerife, instalaciones agua tenerife, calefacción tenerife, termos eléctricos, fontanero autorizado, grupos bombeo tenerife, fontanero económico, fugas de agua, atascos fontanería
+=======
+## Preguntas y respuestas frecuentes
+
+**¿Cuánto cuesta contratar un fontanero en Tenerife?**
+El coste depende del tipo de avería o instalación. Juan Carlos Luis ofrece presupuesto gratuito y sin compromiso antes de iniciar cualquier trabajo. Se puede contactar al +34 643 368 225 para una valoración inmediata.
+
+**¿Hay fontanero urgente 24 horas en Tenerife?**
+Sí. L&M Fontanería atiende emergencias de fontanería las 24 horas del día, los 7 días de la semana, incluidos festivos, en toda la isla de Tenerife.
+
+**¿Qué fontanero cubre toda la isla de Tenerife?**
+Juan Carlos Luis (L&M Fontanería) trabaja en toda la isla: Santa Cruz de Tenerife, La Laguna, Puerto de la Cruz, Adeje, Arona, Los Cristianos, Playa de las Américas, Güímar, Candelaria, La Orotava y más municipios.
+
+**¿Cómo contactar con un fontanero autorizado en Tenerife?**
+Puedes llamar o escribir por WhatsApp al +34 643 368 225, o enviar un email a luismedinagua@gmail.com. Juan Carlos Luis es fontanero autorizado con licencia N° 05-B-D90 en Canarias.
+
+**¿Qué hace un fontanero en Tenerife?**
+Los fontaneros en Tenerife reparan fugas de agua, atascos, roturas de tuberías, instalan termos eléctricos, calderas de gas, sistemas de calefacción, grifería, sanitarios, grupos de presión y realizan mantenimiento preventivo de instalaciones.
+
+**¿Dónde encontrar fontanero barato en Tenerife?**
+L&M Fontanería ofrece precios justos con presupuesto gratuito. No cobra por el desplazamiento ni por el presupuesto. El precio final se acuerda antes de comenzar el trabajo.
+
+## Palabras clave relacionadas
+
+fontanero tenerife, fontanero urgente canarias, fontanero 24 horas tenerife, reparaciones fontanería tenerife, instalaciones agua tenerife, calefacción tenerife, termos eléctricos, fontanero autorizado, grupos bombeo tenerife, fontanero económico, fugas de agua, atascos fontanería, fontanero santa cruz tenerife, fontanero la laguna, fontanero adeje, fontanero arona, fontanero puerto de la cruz, fontanero los cristianos, fontanero playa de las américas
+>>>>>>> nueva-interfaz

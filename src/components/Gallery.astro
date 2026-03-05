@@ -1,174 +1,77 @@
 ---
+import { Image } from "astro:assets";
+import trabajo1 from "../assets/img/img1.jpeg";
+import trabajo2 from "../assets/img/img2.jpeg";
+import trabajo3 from "../assets/img/img3.jpeg";
+import trabajo4 from "../assets/img/img4.jpeg";
+import trabajo5 from "../assets/img/img5.jpeg";
+import trabajo6 from "../assets/img/img6.jpeg";
+
 const trabajos = [
-  {
-    id: 1,
-    cat: "instalaciones",
-    label: "Instalación",
-    titulo: "Renovación de cuarto de baño",
-    desc: "Instalación completa de sanitarios, grifería y sistema de desagüe con materiales premium.",
-    gradient: "from-sky-500 to-blue-700",
-    icon: "install",
-  },
-  {
-    id: 2,
-    cat: "reparaciones",
-    label: "Reparación",
-    titulo: "Fuga en tubería empotrada",
-    desc: "Detección y reparación de fuga oculta sin afectar al acabado de la pared.",
-    gradient: "from-red-500 to-rose-700",
-    icon: "repair",
-  },
-  {
-    id: 3,
-    cat: "calefaccion",
-    label: "Calefacción",
-    titulo: "Caldera de condensación",
-    desc: "Instalación de caldera de alto rendimiento con termostato programable.",
-    gradient: "from-orange-500 to-amber-700",
-    icon: "heat",
-  },
-  {
-    id: 4,
-    cat: "instalaciones",
-    label: "Instalación",
-    titulo: "Grifería de cocina",
-    desc: "Sustitución y modernización completa de grifería en cocina con modelos de bajo consumo.",
-    gradient: "from-cyan-500 to-teal-700",
-    icon: "install",
-  },
-  {
-    id: 5,
-    cat: "mantenimiento",
-    label: "Mantenimiento",
-    titulo: "Revisión anual de instalación",
-    desc: "Inspección completa y preventiva de toda la red de fontanería del inmueble.",
-    gradient: "from-emerald-500 to-green-700",
-    icon: "maintenance",
-  },
-  {
-    id: 6,
-    cat: "reparaciones",
-    label: "Reparación",
-    titulo: "Desatasco urgente",
-    desc: "Intervención de urgencia para desatasco en sistema de desagüe en menos de una hora.",
-    gradient: "from-violet-500 to-purple-700",
-    icon: "repair",
-  },
-  {
-    id: 7,
-    cat: "calefaccion",
-    label: "Calefacción",
-    titulo: "Termo eléctrico 100L",
-    desc: "Sustitución de termo antiguo por modelo de bajo consumo con garantía de fabricante.",
-    gradient: "from-yellow-500 to-orange-600",
-    icon: "heat",
-  },
-  {
-    id: 8,
-    cat: "instalaciones",
-    label: "Instalación",
-    titulo: "Circuito hidráulico para piscina",
-    desc: "Instalación del sistema completo de filtración y circulación para piscina comunitaria.",
-    gradient: "from-blue-500 to-indigo-700",
-    icon: "install",
-  },
-  {
-    id: 9,
-    cat: "mantenimiento",
-    label: "Mantenimiento",
-    titulo: "Mantenimiento de grupos de presión",
-    desc: "Revisión y puesta a punto de grupo de presión en comunidad de vecinos.",
-    gradient: "from-slate-500 to-slate-700",
-    icon: "maintenance",
-  },
+  { id: 1, label: "Instalación",   titulo: "Cuarto de contadores",     desc: "Instalación completa de cuarto de contadores.", img: trabajo1 },
+  { id: 2, label: "Reparación",    titulo: "Fuga en tubería empotrada",         desc: "Detección y reparación de fuga oculta sin afectar al acabado de la pared.", img: trabajo2 },
+  { id: 3, label: "Calefacción",   titulo: "Caldera de condensación",           desc: "Instalación de caldera de alto rendimiento con termostato programable.", img: trabajo3 },
+  { id: 4, label: "Instalación",   titulo: "Grifería de cocina",                desc: "Sustitución y modernización completa de grifería con modelos de bajo consumo.", img: trabajo4 },
+  { id: 5, label: "Reparación",    titulo: "Desatasco urgente",                 desc: "Intervención de urgencia para desatasco en sistema de desagüe en menos de una hora.", img: trabajo5 },
+  { id: 6, label: "Calefacción",   titulo: "Termo eléctrico 100L",              desc: "Sustitución de termo antiguo por modelo de bajo consumo con garantía de fabricante.", img: trabajo6 },
 ];
 ---
 
-<section id="trabajos" class="py-24 bg-white overflow-hidden">
-  <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+<section id="trabajos" class="py-28 bg-deep overflow-hidden relative">
+
+  <!-- Luz de fondo sutil -->
+  <div class="absolute bottom-0 right-0 w-[600px] h-[600px] rounded-full opacity-[0.05] pointer-events-none"
+    style="background: radial-gradient(circle, #cf7840 0%, transparent 70%); transform: translate(30%, 30%); filter: blur(80px);"></div>
+
+  <div class="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
 
     <!-- Cabecera -->
     <div class="text-center mb-12">
-      <p class="text-sky-500 font-semibold text-sm tracking-widest uppercase mb-3">Galería</p>
-      <h2 class="text-4xl font-bold text-slate-900 mb-4">
+      <p class="text-copper font-bold text-xs tracking-widest uppercase mb-4">Galería</p>
+      <h2 class="font-display text-4xl md:text-5xl font-bold text-chalk mb-5 leading-tight">
         Trabajos realizados
       </h2>
-      <p class="text-lg text-slate-500 max-w-2xl mx-auto">
-        Más de 20 años de experiencia avalan la calidad de nuestros trabajos. Cada proyecto, un resultado garantizado.
+      <p class="text-chalk-dim text-lg max-w-2xl mx-auto leading-relaxed">
+        Más de 20 años de experiencia avalan la calidad de cada trabajo. Cada proyecto, un resultado garantizado.
       </p>
     </div>
 
-    <!-- Filtros -->
-    <div class="flex flex-wrap justify-center gap-2 mb-10" id="gallery-filters">
-      <button data-filter="todos"         class="filter-btn active px-5 py-2 rounded-full text-sm font-semibold transition-all duration-200">Todos</button>
-      <button data-filter="instalaciones" class="filter-btn px-5 py-2 rounded-full text-sm font-semibold transition-all duration-200">Instalaciones</button>
-      <button data-filter="reparaciones"  class="filter-btn px-5 py-2 rounded-full text-sm font-semibold transition-all duration-200">Reparaciones</button>
-      <button data-filter="calefaccion"   class="filter-btn px-5 py-2 rounded-full text-sm font-semibold transition-all duration-200">Calefacción</button>
-      <button data-filter="mantenimiento" class="filter-btn px-5 py-2 rounded-full text-sm font-semibold transition-all duration-200">Mantenimiento</button>
-    </div>
-
-    <!-- Grid de trabajos -->
-    <div class="grid sm:grid-cols-2 lg:grid-cols-3 gap-5" id="gallery-grid">
+    <!-- Grid -->
+    <div class="grid sm:grid-cols-2 lg:grid-cols-3 gap-4">
       {trabajos.map((t) => (
-        <div
-          class="gallery-item group relative rounded-2xl overflow-hidden cursor-pointer"
-          data-cat={t.cat}
-        >
-          <!-- Fondo placeholder (reemplazar por <img> con la foto real) -->
-          <div class={`aspect-[4/3] bg-gradient-to-br ${t.gradient} flex items-center justify-center relative`}>
+        <div class="group relative rounded-2xl overflow-hidden border border-rim hover:border-border transition-all duration-300">
 
-            <!-- Icono central decorativo -->
-            <div class="opacity-20 scale-150">
-              {t.icon === "install" && (
-                <svg class="w-20 h-20 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1" d="M8 4h8l-1 1v5.172a2 2 0 00.586 1.414l5 5c1.26 1.26.367 3.414-1.415 3.414H4.828c-1.782 0-2.674-2.154-1.414-3.414l5-5A2 2 0 009 10.172V5L8 4z"/>
-                </svg>
-              )}
-              {t.icon === "repair" && (
-                <svg class="w-20 h-20 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1" d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z"/>
-                </svg>
-              )}
-              {t.icon === "heat" && (
-                <svg class="w-20 h-20 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1" d="M17.657 18.657A8 8 0 016.343 7.343S7 9 9 10c0-2 .5-5 2.986-7C14 5 16.09 5.777 17.656 7.343A7.975 7.975 0 0120 13a7.975 7.975 0 01-2.343 5.657z"/>
-                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1" d="M9.879 16.121A3 3 0 1012.015 11L11 14H9c0 .768.293 1.536.879 2.121z"/>
-                </svg>
-              )}
-              {t.icon === "maintenance" && (
-                <svg class="w-20 h-20 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1" d="M10.325 4.317c.426-1.756 2.924-1.756 3.35 0a1.724 1.724 0 002.573 1.066c1.543-.94 3.31.826 2.37 2.37a1.724 1.724 0 001.065 2.572c1.756.426 1.756 2.924 0 3.35a1.724 1.724 0 00-1.066 2.573c.94 1.543-.826 3.31-2.37 2.37a1.724 1.724 0 00-2.572 1.065c-.426 1.756-2.924 1.756-3.35 0a1.724 1.724 0 00-2.573-1.066c-1.543.94-3.31-.826-2.37-2.37a1.724 1.724 0 00-1.065-2.572c-1.756-.426-1.756-2.924 0-3.35a1.724 1.724 0 001.066-2.573c-.94-1.543.826-3.31 2.37-2.37.996.608 2.296.07 2.572-1.065z"/>
-                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1" d="M15 12a3 3 0 11-6 0 3 3 0 016 0z"/>
-                </svg>
-              )}
-            </div>
-
-            <!-- Badge de categoría -->
-            <div class="absolute top-3 left-3">
-              <span class="bg-white/20 backdrop-blur-sm text-white text-xs font-semibold px-3 py-1 rounded-full border border-white/30">
+          <!-- Imagen o placeholder -->
+          <div class="aspect-[4/3] relative overflow-hidden">
+            {t.img && (
+              <Image src={t.img} alt={t.titulo} width={600} height={450} class="absolute inset-0 w-full h-full object-cover transition-transform duration-500 group-hover:scale-105" />
+            )}
+            <!-- Badge categoría -->
+            <div class="absolute top-3 left-3 z-10">
+              <span class="bg-void/60 backdrop-blur-sm text-chalk-dim text-[11px] font-bold tracking-wide uppercase px-3 py-1 rounded-full border border-rim/60">
                 {t.label}
               </span>
             </div>
 
             <!-- Overlay hover -->
-            <div class="absolute inset-0 bg-slate-900/70 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex flex-col items-center justify-center p-6 text-center">
-              <p class="text-white font-bold text-lg mb-2">{t.titulo}</p>
-              <p class="text-slate-300 text-sm leading-relaxed mb-5">{t.desc}</p>
+            <div class="absolute inset-0 bg-void/80 backdrop-blur-[2px] opacity-0 group-hover:opacity-100 transition-all duration-300 flex flex-col items-center justify-center p-6 text-center z-10">
+              <p class="text-chalk font-display font-bold text-lg mb-2 leading-tight">{t.titulo}</p>
+              <p class="text-chalk-dim text-sm leading-relaxed mb-5">{t.desc}</p>
               <a
                 href="#contacto"
-                class="inline-flex items-center gap-2 bg-sky-500 hover:bg-sky-400 text-white text-sm font-semibold px-5 py-2.5 rounded-xl transition-colors"
+                class="inline-flex items-center gap-2 bg-copper hover:bg-copper-light text-void text-xs font-bold px-5 py-2.5 rounded-lg transition-colors"
               >
                 Solicitar similar
-                <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"/>
+                <svg class="w-3.5 h-3.5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M9 5l7 7-7 7"/>
                 </svg>
               </a>
             </div>
           </div>
 
-          <!-- Info inferior -->
-          <div class="px-4 py-3 bg-white border border-slate-100 border-t-0 rounded-b-2xl">
-            <p class="font-semibold text-slate-900 text-sm">{t.titulo}</p>
+          <!-- Pie de tarjeta -->
+          <div class="px-4 py-3 bg-raised">
+            <p class="font-semibold text-chalk-dim text-sm group-hover:text-chalk transition-colors">{t.titulo}</p>
           </div>
         </div>
       ))}
@@ -176,14 +79,14 @@ const trabajos = [
 
     <!-- CTA inferior -->
     <div class="mt-14 text-center">
-      <p class="text-slate-500 text-sm mb-4">¿Necesitas un trabajo similar?</p>
+      <p class="text-chalk-mute text-sm mb-5">¿Necesitas un trabajo similar?</p>
       <a
         href="#contacto"
-        class="inline-flex items-center gap-2 bg-sky-500 hover:bg-sky-400 text-white font-semibold px-8 py-3.5 rounded-xl transition-colors shadow-lg shadow-sky-500/20"
+        class="inline-flex items-center gap-2 bg-copper hover:bg-copper-light text-void font-bold px-8 py-4 rounded-xl transition-all duration-200 shadow-xl shadow-copper/20 hover:shadow-copper/35 hover:-translate-y-px"
       >
         Solicitar presupuesto gratuito
         <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"/>
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M9 5l7 7-7 7"/>
         </svg>
       </a>
     </div>
@@ -191,52 +94,3 @@ const trabajos = [
   </div>
 </section>
 
-<style>
-  .filter-btn {
-    background: transparent;
-    color: #64748b;
-    border: 1px solid #e2e8f0;
-  }
-  .filter-btn:hover {
-    background: #f8fafc;
-    color: #0f172a;
-    border-color: #cbd5e1;
-  }
-  .filter-btn.active {
-    background: #0ea5e9;
-    color: #ffffff;
-    border-color: #0ea5e9;
-    box-shadow: 0 4px 14px rgba(14, 165, 233, 0.25);
-  }
-  .gallery-item {
-    transition: opacity 0.3s ease, transform 0.3s ease;
-  }
-  .gallery-item.hidden-item {
-    display: none;
-  }
-</style>
-
-<script>
-  const btns   = document.querySelectorAll<HTMLButtonElement>('.filter-btn');
-  const items  = document.querySelectorAll<HTMLElement>('.gallery-item');
-
-  btns.forEach((btn) => {
-    btn.addEventListener('click', () => {
-      const filter = btn.dataset.filter as string;
-
-      // Actualizar botón activo
-      btns.forEach(b => b.classList.remove('active'));
-      btn.classList.add('active');
-
-      // Filtrar items
-      items.forEach((item) => {
-        const cat = item.dataset.cat as string;
-        if (filter === 'todos' || cat === filter) {
-          item.classList.remove('hidden-item');
-        } else {
-          item.classList.add('hidden-item');
-        }
-      });
-    });
-  });
-</script>

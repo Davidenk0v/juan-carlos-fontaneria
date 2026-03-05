@@ -1,13 +1,63 @@
 @import "tailwindcss";
 
+@theme {
+  /* Tipografías */
+  --font-sans:    "Plus Jakarta Sans", system-ui, sans-serif;
+  --font-display: "Fraunces", Georgia, serif;
+
+  /* Cobre — acento principal */
+  --color-copper:       #cf7840;
+  --color-copper-light: #e8904e;
+  --color-copper-pale:  #f4b070;
+  --color-copper-dark:  #9e5520;
+  --color-copper-dim:   #6e3c14;
+
+  /* Fondos oscuros */
+  --color-void:    #060e1a;
+  --color-deep:    #0b1524;
+  --color-surface: #10192c;
+  --color-raised:  #152034;
+  --color-high:    #1b283e;
+  --color-rim:     #21324e;
+  --color-border:  #2a3f60;
+
+  /* Texto claro */
+  --color-chalk:      #f0e8d2;
+  --color-chalk-dim:  #bdb09a;
+  --color-chalk-mute: #7e7260;
+}
+
 html {
   scroll-behavior: smooth;
 }
 
-/* Compensar el header fijo al navegar a una sección */
-#inicio,
-#servicios,
-#trabajos,
-#contacto {
-  scroll-margin-top: 100px;
+body {
+  background-color: var(--color-void);
+  color: var(--color-chalk);
 }
+
+#inicio, #servicios, #trabajos, #contacto {
+  scroll-margin-top: 80px;
+}
+
+/* Animaciones de entrada */
+@keyframes fadeUp {
+  from { opacity: 0; transform: translateY(24px); }
+  to   { opacity: 1; transform: translateY(0); }
+}
+@keyframes fadeIn {
+  from { opacity: 0; }
+  to   { opacity: 1; }
+}
+
+.anim-fade-up {
+  animation: fadeUp 0.7s cubic-bezier(0.22, 1, 0.36, 1) both;
+}
+.anim-fade-in {
+  animation: fadeIn 0.6s ease both;
+}
+.delay-100 { animation-delay: 0.1s; }
+.delay-200 { animation-delay: 0.2s; }
+.delay-300 { animation-delay: 0.3s; }
+.delay-400 { animation-delay: 0.4s; }
+.delay-500 { animation-delay: 0.5s; }
