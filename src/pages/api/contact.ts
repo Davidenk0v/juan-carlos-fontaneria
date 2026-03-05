@@ -29,13 +29,15 @@ export const POST: APIRoute = async ({ request }) => {
   if (!nombre?.trim() || !telefono?.trim() || !mensaje?.trim()) {
     return new Response(
       JSON.stringify({ error: "Faltan campos obligatorios." }),
-      { status: 422, headers: { "Content-Type": "application/json" } }
+      { status: 422, headers: { "Content-Type": "application/json" } },
     );
   }
 
-  const servicioLabel = servicio ? (SERVICE_LABELS[servicio] ?? servicio) : "No especificado";
+  const servicioLabel = servicio
+    ? (SERVICE_LABELS[servicio] ?? servicio)
+    : "No especificado";
   const fechaHora = new Date().toLocaleString("es-ES", {
-    timeZone: "Europe/Madrid",
+    timeZone: "Atlantic/Canary",
     dateStyle: "full",
     timeStyle: "short",
   });
@@ -144,8 +146,8 @@ export const POST: APIRoute = async ({ request }) => {
 `;
 
   const { error } = await resend.emails.send({
-    from: "Formulario Web <onboarding@resend.dev>",
-    to: ["luismedinagua@gmail.com"],
+    from: "Nuevo presupuesto <onboarding@resend.dev>",
+    to: ["david4100ggx@gmail.com"],
     replyTo: undefined,
     subject: `Nuevo presupuesto de ${nombre} — ${servicioLabel}`,
     html,
@@ -154,8 +156,10 @@ export const POST: APIRoute = async ({ request }) => {
   if (error) {
     console.error("Resend error:", error);
     return new Response(
-      JSON.stringify({ error: "No se pudo enviar el mensaje. Inténtalo de nuevo." }),
-      { status: 500, headers: { "Content-Type": "application/json" } }
+      JSON.stringify({
+        error: "No se pudo enviar el mensaje. Inténtalo de nuevo.",
+      }),
+      { status: 500, headers: { "Content-Type": "application/json" } },
     );
   }
 
